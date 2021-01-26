@@ -16,14 +16,15 @@ public void setup()
 }
 public boolean palindrome(String word)
 {
-  //your code here
-  return false;
+  return word.toLowerCase().replaceAll("[^a-z]", "").equals(reverse(word.toLowerCase().replaceAll("[^a-z]", "")));
 }
 public String reverse(String str)
 {
-    String sNew = new String();
-    //your code here
-    return sNew;
+    String rev = "";
+		for (int i = 0; i < str.length(); i++) {
+		  rev += str.charAt(str.length()-1-i);
+		}
+		return rev;
 }
 
 
